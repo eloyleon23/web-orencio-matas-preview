@@ -28,8 +28,10 @@ jobs:
           ref: feature/web-reestructuracion
           path: sitio
 
-      - name: Configurar Pages
+      - name: Configurar Pages (enablement:true crea el sitio si todavia no existe)
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Subir el sitio como artefacto
         uses: actions/upload-pages-artifact@v3
