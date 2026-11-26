@@ -21,11 +21,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout de feature/web-reestructuracion (repo publico origen, sin credenciales)
+      - name: Checkout de feature/area-clientes (repo publico origen, sin credenciales)
         uses: actions/checkout@v4
         with:
           repository: eloyleon23/web-orencio-matas
-          ref: feature/web-reestructuracion
+          ref: feature/area-clientes
           path: sitio
 
       - name: Configurar Pages (enablement:true crea el sitio si todavia no existe)
